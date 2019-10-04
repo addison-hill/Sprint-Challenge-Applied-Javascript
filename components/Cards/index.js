@@ -59,26 +59,32 @@ function Article(data) {
     const newArticleImg = document.createElement('img');
     const newArticleFooter = document.createElement('span');
 
+
+    // const att = document.createAttribute("class");
+    // att.value = "img-container";
+    // newArticleImgContainer.setAttributeNode(att);
+
+
     //Setup structure
     newArticle.appendChild(newArticleHeadline);
     newArticle.appendChild(newArticleAuthor);
-    newArticle.appendChild(newArticleImgContainer);
-    newArticle.appendChild(newArticleImg);
-    newArticle.appendChild(newArticleFooter);
+    newArticleAuthor.appendChild(newArticleImgContainer);
+    newArticleAuthor.appendChild(newArticleImg);
+    newArticleAuthor.appendChild(newArticleFooter);
     newArticleImgContainer.appendChild(newArticleImg);
 
     // Set class names
     newArticle.classList.add('card');
     newArticleHeadline.classList.add('headline');
     newArticleAuthor.classList.add('author');
-    newArticleImgContainer.classList.add('imgContainer');
-    newArticleImg.classList.add('imgContainerImg');
+    newArticleImgContainer.classList.add('img-container');
+    newArticleImg.classList.add('img');
 
     // newArticleImgContainer.setAttributeNode(newArticleImg);
 
     // Set text content
     newArticleHeadline.textContent = data.headline;
-    newArticleAuthor.textContent = data.authorName;
+    // newArticleAuthor.textContent = data.authorName;
     newArticleImg.src = data.authorPhoto;
     newArticleFooter.textContent = `By ${data.authorName}`;
     // newArticleImgContainer.setAttributeNode(newArticleImg);
