@@ -24,7 +24,6 @@ axios
 })
 
 function Tab(topic) {
-    // Define new elements
     const newTopic = document.createElement('div');
 
     newTopic.classList.add('tab');
